@@ -510,6 +510,8 @@
 #define STM32_ACTIVATE_PLL          FALSE
 #endif
 
+
+#if ( STM32_ACTIVATE_PLL ==  TRUE )
 /**
  * @brief   PLLMUL field.
  */
@@ -582,6 +584,8 @@
 /* PLL output frequency range check.*/
 #if (STM32_PLLCLKOUT < 2000000) || (STM32_PLLCLKOUT > 32000000)
 #error "STM32_PLLCLKOUT outside acceptable range (2...32MHz)"
+#endif
+
 #endif
 
 /**
