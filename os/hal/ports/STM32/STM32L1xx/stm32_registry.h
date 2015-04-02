@@ -127,6 +127,14 @@
 #define STM32_TIM4_IS_32BITS                FALSE
 #define STM32_TIM4_CHANNELS                 4
 
+#if defined(STM32L151RCT6) || defined(__DOXYGEN__)
+	#define STM32_HAS_TIM5                      TRUE
+	#define STM32_TIM5_IS_32BITS                TRUE
+	#define STM32_TIM5_CHANNELS                 4
+#else
+	#define STM32_HAS_TIM5                      FALSE
+#endif
+
 #define STM32_HAS_TIM6                      TRUE
 #define STM32_TIM6_IS_32BITS                FALSE
 #define STM32_TIM6_CHANNELS                 0
@@ -148,7 +156,6 @@
 #define STM32_TIM11_CHANNELS                2
 
 #define STM32_HAS_TIM1                      FALSE
-#define STM32_HAS_TIM5                      FALSE
 #define STM32_HAS_TIM8                      FALSE
 #define STM32_HAS_TIM12                     FALSE
 #define STM32_HAS_TIM13                     FALSE
